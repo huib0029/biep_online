@@ -1,27 +1,16 @@
-# Laravel & SB Admin
+# Laravel 5.3 & SB Admin v2
 
-This is a fresh install of the Laravel 5.3 application using the SB Admin Theme.
+Schoone gerefactored versie van BIEPonline V1
 
-## Documentation
+# Model-View-Controller princiepe
 
-### Laravel
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+We werken volgens het Model, View en controller principe, de basis van Laravel.
 
-### SB Admin 2
+# Team het zinkende schip:
 
-This is the CSS Bootstrap theme applied in this applciation.
+## *Teun *Bart *Jordy *Jasper *Niels *Mike
 
-Source code of SB Admin Bootstrap can be found [Github](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2).
-
-## License
-
-### Laravel
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
-
-### SB Admin
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT license](https://github.com/BlackrockDigital/startbootstrap-sb-admin-2/blob/gh-pages/LICENSE).
-
-## Installation
+# Installatie (optioneel, via Xampp werkt het ook)
 
 * `git clone https://github.com/hectordolo/laravel-sbadmin.git 'PROJECT_DIRECTORY'`
 * `cd 'PROJECT_DIRECTORY'`
@@ -36,4 +25,4 @@ Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT license]
 * `php artisan key:generate`
 * `php artisan config:clear`
 * `php artisan serve`
-* You can now register a new user to use the application.
+
