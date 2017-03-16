@@ -1,0 +1,1 @@
+Start index.php en volg de instructies
