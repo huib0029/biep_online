@@ -26,6 +26,8 @@ Route::resource ( 'approvestudents', 'ApprovestudentsController');
 Route::resource ( 'returnbooks', 'ReturnbooksController');
 Route::resource ( 'issuedbooks', 'IssuedbooksController');
 
+Route::resource ( 'books', 'BookController');
+
 Auth::routes();
 
 Route::group(['middleware' => ['web','auth']], function () {
