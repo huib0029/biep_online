@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
-
+use App\Allstudents;
 class AllstudentsController extends Controller
 {
     /**
@@ -24,6 +24,8 @@ class AllstudentsController extends Controller
      */
     public function index()
     {
-        return view('allstudents');
+        return view('allstudents',[
+            'students' => Allstudents::orderBy ( 'id' )->get (),
+        ]);
     }
 }
