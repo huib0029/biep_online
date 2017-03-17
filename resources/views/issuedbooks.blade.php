@@ -10,7 +10,8 @@
   @if (count($books_issued) == 0)
     Er zijn op dit moment geen boeken in omloop....
   @endif
-  @if (count($books_issued) > 0)
+      @if (count($books_issued) > 0)
+
   <table class="table table-condensed table-bordered table-striped">
   	<thead>
   		<tr>
