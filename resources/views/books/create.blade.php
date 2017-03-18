@@ -21,36 +21,37 @@
 
                         <div class="panel-body">
 
-                            {!! Form::open(array('route'=>'books.store')) !!}
+                            {!! Form::open(array('route'=>'books_store' , 'class' => 'form form-horizontal')) !!}
 
-                                <div class="form-group">
-                                    {!! Form::label('book_isbn', 'Vul het ISBN in') !!}
-                                    {!! Form::text('book_isbn',null, ['class'=>'form-control']) !!}
-                                </div>
+                            <div class="form-group">
+                                {!! Form::label('book_isbn', 'Vul het ISBN in') !!}
+                                {!! Form::text('book_isbn',null, ['class'=>'form-control']) !!}
+                            </div>
 
-                                <div class="form-group">
-                                    {!! Form::label('book_title', 'Vul de titel in') !!}
-                                    {!! Form::text('book_title',null, ['class'=>'form-control']) !!}
-                                </div>
+                            <div class="form-group">
+                                {!! Form::label('book_title', 'Vul de titel in') !!}
+                                {!! Form::text('book_title',null, ['class'=>'form-control']) !!}
+                            </div>
 
-                                <div class="form-group">
-                                    {!! Form::label('book_author', 'Vul de auteur in') !!}
-                                    {!! Form::text('book_author',null, ['class'=>'form-control']) !!}
-                                </div>
+                            <div class="form-group">
+                                {!! Form::label('book_author', 'Vul de auteur in') !!}
+                                {!! Form::text('book_author',null, ['class'=>'form-control']) !!}
+                            </div>
 
-                                <div class="form-group">
-                                    {!! Form::label('book_dis', 'Vul de beschijving in') !!}
-                                    {!! Form::textarea('book_dis',null, ['class'=>'form-control']) !!}
-                                </div>
+                            <div class="form-group">
+                                {!! Form::label('book_dis', 'Vul de beschijving in') !!}
+                                {!! Form::textarea('book_dis',null, ['class'=>'form-control']) !!}
+                            </div>
 
-                                <div class="form-group">
-                                    {!! Form::label('book_colorcat', 'Kies de categorie') !!}
-                                    {!! Form::select('size', array('Groen' => 'groen', 'Blauw' => 'blauw', 'Paars' => 'paars',)) !!}
-                                </div>
+                            <div class="form-group">
+                                {!! Form::label('book_colorcat', 'Kies de categorie') !!}
+                                {!! Form::select('size', array('Groen' => 'groen', 'Blauw' => 'blauw', 'Paars' => 'paars',)) !!}
+                            </div>
 
-                                <div class="form-group">
-                                    {!! Form::button('Toevoegen',['type'=>'submit','class'=>'btn btn-primary']) !!}
-                                </div>
+                            <div class="form-group">
+{{--                                {!! Form::button('Toevoegen',['type'=>'submit','class'=>'btn btn-primary']) !!}--}}
+                                {!! Form::submit('Contact Us!',array('class'=>'btn btn-primary')) !!}
+                            </div>
 
                             {!! Form::close() !!}
 

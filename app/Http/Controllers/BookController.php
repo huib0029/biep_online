@@ -39,6 +39,12 @@ class BookController extends Controller
      */
     public function store(BookRequest $request)
     {
+        die();
+        $name = $request->input('book_isbn');
+
+        var_dump($name);
+        die();
+
         Books::create($request->all());
         return redirect()->route('books.index')->with('message', 'Het boek is toegevoegd aan de catalogus');
     }
