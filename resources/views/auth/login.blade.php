@@ -1,11 +1,11 @@
 @extends('layouts.guest')
 
 @section('title')
-    Home
+    BIEPonline - Login panel
 @endsection
 
 @section('page-header')
-    Home
+    Login
 @endsection
 
 @section('page-content')
