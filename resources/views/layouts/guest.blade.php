@@ -57,7 +57,7 @@
         </div>
 
         <ul class="nav navbar-top-links navbar-right">
-            <li><a href="{{ url('/login') }}"><i class="fa fa-university fa-2x fa-fw" aria-hidden="true"></i>&nbsp;Biblioticaris / Bibliothecaresse login</a></li>
+            <li><a href="{{ url('/login') }}"><i class="fa fa-university fa-2x fa-fw" aria-hidden="true"></i>&nbsp;Bibliothecaris / Bibliothecaresse login</a></li>
             <li><a href="{{ url('/register') }}">Registreren (admin)</a></li>
         </ul>
     </nav>
