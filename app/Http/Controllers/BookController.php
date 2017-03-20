@@ -37,15 +37,10 @@ class BookController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(BookRequest $request)
+    public function store(Request $request)
     {
-        die();
-        $name = $request->input('book_isbn');
+        $book = Books::create($request->all());
 
-        var_dump($name);
-        die();
-
-        Books::create($request->all());
         return redirect()->route('books.index')->with('message', 'Het boek is toegevoegd aan de catalogus');
     }
 
@@ -55,9 +50,9 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Books $book)
     {
-        //
+        return view('books.show', compact('book'));
     }
 
     /**
@@ -66,9 +61,9 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Books $book)
     {
-        //
+        return view('books.edit', compact('book'));
     }
 
     /**
@@ -78,9 +73,10 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Books $book)
     {
-        //
+        $book->update($request->all());
+        return redirect()->route('books.index')->with('message', 'Boek is succesvol aangepast');
     }
 
     /**
@@ -89,8 +85,9 @@ class BookController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Books $book)
     {
-        //
+        $book->delete();
+        return redirect()->route('books.index')->with('message', 'Boek is succesvol verwijderd');
     }
 }

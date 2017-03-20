@@ -10,7 +10,7 @@
 
 @section('page-content')
     <div class="col-sm-12">
-        @section ('atable_panel_title','Toegevoegde Boeken')
+        @section ('atable_panel_title','Boek bewerken')
         @section ('atable_panel_body')
             <div class="container">
                 <div class="row">
@@ -26,7 +26,7 @@
 
                         <div class="panel-body">
 
-                            {!! Form::open(array('route'=> ['books.store'] , 'class' => 'form form-horizontal')) !!}
+                            {!! Form::model($book,array('route'=> ['books.update', $book->id], 'method' => 'PUT', 'class' => 'form form-horizontal')) !!}
 
                             <div class="form-group">
                                 {!! Form::label('book_isbn', 'Vul het ISBN in') !!}
@@ -59,7 +59,7 @@
                             </div>
 
                             <div class="form-group">
-                                {!! Form::button('Toevoegen',['type'=>'submit','class'=>'btn btn-primary']) !!}
+                                {!! Form::button('Bewerken',['type'=>'submit','class'=>'btn btn-primary']) !!}
                             </div>
 
                             {!! Form::close() !!}

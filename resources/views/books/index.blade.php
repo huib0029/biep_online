@@ -19,8 +19,6 @@
                             {{ link_to_route('books.create', 'Nieuw Boek Toevoegen', null, ['class'=>'btn btn-primary btn-lg btn-block']) }}
                         </div>
 
-                        <br>
-
                         <div class="panel-body">
 
                             <table class="table table-condensed table-bordered table-striped table-responsive small">
@@ -33,11 +31,13 @@
                                 @endif
                                 @foreach($books as $book)
                                     <tr>
-                                        <td>{{ $book->book_title }}</td>
+                                        <td>{{ link_to_route('books.show', $book->book_title, [$book->id]) }}</td>
                                         <td>
-                                            Bewerk
-                                            |
-                                            Verwijder
+                                            {!! Form::open(array('route'=>['books.destroy', $book->id], 'method'=>'DELETE')) !!}
+                                                {{ link_to_route('books.edit', 'Bewerken', [$book->id], ['class'=>'btn btn-primary']) }}
+                                                |
+                                                {!! Form::button('Verwijder',['class'=>'btn btn-danger', 'type'=>'submit']) !!}
+                                            {!! Form::close() !!}
                                         </td>
                                     </tr>
                                 @endforeach

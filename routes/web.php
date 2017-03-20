@@ -28,8 +28,9 @@ Route::resource ( 'issuedbooks', 'IssuedbooksController');
 
 Route::resource ( 'books', 'BookController');
 
-Route::post('books/add',
-    ['as' => 'books_store', 'uses' => 'BookController@store']);
+
+Route::post('books/create',
+    ['as' => 'books.store', 'uses' => 'BookController@store']);
 
 
 Auth::routes();
