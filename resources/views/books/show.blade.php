@@ -10,12 +10,59 @@
 
 @section('page-content')
     <div class="col-sm-12">
-        @section ('atable_panel_title','{{ $book->book_title }}')
+        @section ('atable_panel_title','Overzicht')
         @section ('atable_panel_body')
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-0">
                         <div class="form-group">
+
+                            <table class="table table-condensed table-bordered table-striped table-responsive small">
+
+                                    <tr>
+                                        <td>
+                                            Titel van het boek
+                                        </td>
+                                        <td>
+                                            {{ $book->book_title }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            ISBN nummer
+                                        </td>
+                                        <td>
+                                            {{ $book->book_isbn }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Auteur
+                                        </td>
+                                        <td>
+                                            {{ $book->book_author_name }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Beschrijving
+                                        </td>
+                                        <td>
+                                            {{ $book->book_dis }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Categorie
+                                        </td>
+                                        <td>
+                                            {{ $book->book_colorcat }}
+                                        </td>
+                                    </tr>
+
+                            </table>
+
+                            {{ link_to_route('books.index', 'Terug', ['class'=>'btn btn-primary']) }}
 
                         </div>
 
