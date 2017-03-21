@@ -20,41 +20,49 @@
                             <table class="table table-condensed table-bordered table-striped table-responsive small">
 
                                     <tr>
-                                        <td>
+                                        <th>
                                             Titel van het boek
-                                        </td>
+                                        </th>
                                         <td>
                                             {{ $book->book_title }}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <th>
                                             ISBN nummer
-                                        </td>
+                                        </th>
                                         <td>
                                             {{ $book->book_isbn }}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <th>
                                             Auteur
-                                        </td>
+                                        </th>
                                         <td>
                                             {{ $book->book_author_name }}
                                         </td>
                                     </tr>
                                     <tr>
+                                        <th>
+                                            Auteur id
+                                        </th>
                                         <td>
-                                            Beschrijving
+                                            {{ $book->book_author_id }}
                                         </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
+                                            Beschrijving
+                                        </th>
                                         <td>
                                             {{ $book->book_dis }}
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
+                                        <th>
                                             Categorie
-                                        </td>
+                                        </th>
                                         <td>
                                             {{ $book->book_colorcat }}
                                         </td>
