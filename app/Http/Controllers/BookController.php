@@ -19,6 +19,7 @@ class BookController extends Controller
     {
         $books = Books::all();
         return view('books.index',compact('books'));
+        //de toegevoegde boeken uit de database worden getoond in de index
     }
 
     /**
@@ -42,6 +43,7 @@ class BookController extends Controller
         $book = Books::create($request->all());
 
         return redirect()->route('books.index')->with('message', 'Het boek is toegevoegd aan de catalogus');
+        //het boek wordt toegevoegd in de database
     }
 
     /**
@@ -64,6 +66,7 @@ class BookController extends Controller
     public function edit(Books $book)
     {
         return view('books.edit', compact('book'));
+        //de info die in de database staat wordt getoont op de edit view
     }
 
     /**
@@ -77,6 +80,7 @@ class BookController extends Controller
     {
         $book->update($request->all());
         return redirect()->route('books.index')->with('message', 'Boek is succesvol aangepast');
+        //het boek wordt aangepast in de database
     }
 
     /**
@@ -89,5 +93,6 @@ class BookController extends Controller
     {
         $book->delete();
         return redirect()->route('books.index')->with('message', 'Boek is succesvol verwijderd');
+        //het boek wordt verwijderd uit de database
     }
 }

@@ -21,6 +21,14 @@
 
                                     <tr>
                                         <th>
+                                            Het book id
+                                        </th>
+                                        <td>
+                                            {{ $book->book_id }}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>
                                             Titel van het boek
                                         </th>
                                         <td>
