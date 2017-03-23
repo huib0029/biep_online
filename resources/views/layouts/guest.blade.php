@@ -1,3 +1,4 @@
+@include('layouts.help')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +58,8 @@
         </div>
 
         <ul class="nav navbar-top-links navbar-right">
-            <li><a href="{{ url('/login') }}"><i class="fa fa-university fa-2x fa-fw" aria-hidden="true"></i>&nbsp;Administrator / Bibliothecaris login</a></li>
+            <li data-toggle="modal" data-target="#help_guest"><a href="#"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a></li>
+            <li><a href="{{ url('/login') }}"><i class="fa fa-university fa-2x fa-fw" aria-hidden="true"></i>&nbsp;Bibliothecaris / Bibliothecaresse login</a></li>
             <li><a href="{{ url('/register') }}">Registreren (admin)</a></li>
         </ul>
     </nav>

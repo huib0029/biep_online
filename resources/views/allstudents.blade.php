@@ -9,6 +9,9 @@
 <div class="col-sm-12">
   @section ('atable_panel_title','Scholieren die nu geregistreerd staan in het BIEPonline systeem ')
   @section ('atable_panel_body')
+  @if (count($students) == 0)
+      <p>Geen studenten gevonden.</p>
+        @else()
   <table class="table table-condensed table-bordered table-striped table-responsive small">
   	<thead>
   		<tr>
@@ -24,61 +27,19 @@
   		</tr>
   	</thead>
   	<tbody>
-  		<tr class="">
-  			<td>321322</td>
-  			<td>Ivo</td>
-        <td></th>
-  			<td>Zegers</td>
-        <td>Ivo.Zegers@gmail.com</td>
-        <td>Gerda.zegers@zeelandnet.nl</td>
-        <td>0658952321</td>
-        <td>19-12-2001</td>
-        <td><center><button type="button" class="btn btn-default btn-circle disabled">1</button></center></td>
-      </tr>
-      <tr class="">
-        <td>84516</td>
-        <td>Gerrit</td>
-        <td></th>
-        <td>Aldershof</td>
-        <td>Gerrit.Aldershof@gmail.com</td>
-        <td>Marloes.aldershof@zeelandnet.nl</td>
-        <td>0695958475</td>
-        <td>20-12-2002</td>
-        <td><center><button type="button" class="btn btn-default btn-circle disabled">4</button></center></td>
-      </tr>
-      <tr class="">
-        <td>8475</td>
-        <td>Levi</td>
-        <td></th>
-        <td>Zuiderduin</td>
-        <td>levi.zuiderduin@gmail.com</td>
-        <td>peter.zuiderduin@hotmail.com</td>
-        <td>0118-543212</td>
-        <td>02-12-2003</td>
-        <td><center><button type="button" class="btn btn-default btn-circle disabled">0</button></center></td>
-      </tr>
-      <tr class="">
-        <td>442</td>
-        <td>Leonard</td>
-        <td>van</th>
-        <td>Achthoven</td>
-        <td>leonard.van.achthoven@hotmail.com</td>
-        <td>karin.achthoven@zeelandnet.nl</td>
-        <td>0685859585</td>
-        <td>01-03-2003</td>
-        <td><center><button type="button" class="btn btn-default btn-circle disabled">0</button></center></td>
-      </tr>
-      <tr class="">
-        <td>5213</td>
-        <td>Tijn</td>
-        <td>van</th>
-        <td>Daal</td>
-        <td>tijn.van.daal@gmail.com</td>
-        <td>ton.van.daal@zeelandnet.nl</td>
-        <td>0113-859562</td>
-        <td>01-08-1999</td>
-        <td><center><button type="button" class="btn btn-default btn-circle disabled">0</button></center></td>
-      </tr>
+        <tr> @foreach($students as $student)
+        <td>{{ $student->student_id }}</td>
+        <td>{{ $student->first_name }}</td>
+        <td>{{ $student->middlename }}</td>
+        <td>{{ $student->last_name }}</td>
+        <td>{{ $student->email_id }}</td>
+        <td>{{ $student->email_parents }}</td>
+        <td>{{ $student->tel_parents }}</td>
+        <td>{{ $student->birth_date }}</td>
+        <td>{{ $student->books_issued }}</td>
+            @endforeach
+            @endif
+    </tr>
   	</tbody>
   </table>
   @endsection

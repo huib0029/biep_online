@@ -76,7 +76,7 @@
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li>
-                    <a href="{{url('/')}}"><i class="fa fa-home fa-fw"></i> Startpagina</a>
+                    <a href="{{url('home')}}"><i class="fa fa-home fa-fw"></i> Startpagina</a>
                 </li>
                 <li>
                     <a href="{{ url ('bookadd') }}"><i class="fa fa-book fa-fw"></i> Boeken toevoegen</a>
