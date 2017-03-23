@@ -35,7 +35,7 @@
 
                             <div class="form-group">
                                 {!! Form::label('book_isbn', 'Vul het ISBN in') !!}
-                                {!! Form::text('book_isbn',null, ['class'=>'form-control']) !!}
+                                {!! Form::number('book_isbn',null, ['class'=>'form-control']) !!}
                             </div>
 
                             <div class="form-group">
@@ -50,7 +50,7 @@
 
                             <div class="form-group">
                                 {!! Form::label('book_author_id', 'Vul het auteur id in') !!}
-                                {!! Form::number('book_author_id', null) !!}
+                                {!! Form::number('book_author_id', null, ['class'=>'form-control']) !!}
                             </div>
 
                             <div class="form-group">
@@ -60,7 +60,21 @@
 
                             <div class="form-group">
                                 {!! Form::label('book_colorcat', 'Kies de categorie') !!}
-                                {!! Form::select('book_colorcat', array('Groen' => 'groen', 'Blauw' => 'blauw')) !!}
+                                {!! Form::select('book_colorcat', array(
+                                    'GEEL&#x25CF;' => 'Geel&#x25CF;',
+                                    'GEEL&#x25CF;&#x25CF;' => 'Geel&#x25CF;&#x25CF;',
+                                    'GRIJS&#x25CF;' => 'Grijs&#x25CF;',
+                                    'GRIJS&#x25CF;&#x25CF;' => 'Grijs&#x25CF;&#x25CF;',
+                                    'GRIJS&#x25CF;&#x25CF;&#x25CF;' => 'Grijs&#x25CF;&#x25CF;&#x25CF;',
+                                    'ROOD&#x25CF;' => 'Rood&#x25CF;',
+                                    'WIT&#x25CF;' => 'Wit&#x25CF;',
+                                    'BLAUW' => 'Blauw',
+                                    'BRUIN' => 'Bruin',
+                                    'GEEL' => 'Geel',
+                                    'GROEN' => 'Groen',
+                                    'KERSTBOE' => 'Kerstboek'
+
+                                    ),['class'=>'form-control']) !!}
                             </div>
 
                             <div class="form-group">

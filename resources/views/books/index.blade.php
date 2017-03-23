@@ -16,16 +16,17 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-0">
                         <div class="form-group">
-                            {{ link_to_route('books.create', 'Nieuw Boek Toevoegen', null, ['class'=>'btn btn-primary btn-lg btn-block']) }}
+                            {{ link_to_route('books.create', 'Nieuw Boek Toevoegen', null, ['class'=>'btn btn-primary btn-lg']) }}
                         </div>
+
+                        @if (count($books) == 0)
+                            Er zijn op dit moment geen boeken toegevoegd....
+                        @else
 
                         <div class="panel-body">
 
-                            @if (count($books) == 0)
-                                Er zijn op dit moment geen boeken toegevoegd....
-                            @endif
 
-                            <table class="table table-condensed table-bordered table-striped table-responsive small">
+                            <table class="table table-condensed table-bordered table-striped table-responsive">
                                 <tr>
                                     <th>Titel</th>
                                     <th>Actie</th>
@@ -34,10 +35,9 @@
                                 @foreach($books as $book)
                                     <tr>
                                         <td>{{ link_to_route('books.show', $book->book_title, [$book->id]) }}</td>
-                                        <td>
+                                        <td class="col-sm-4">
                                             {!! Form::open(array('route'=>['books.destroy', $book->id], 'method'=>'DELETE')) !!}
                                                 {{ link_to_route('books.edit', 'Bewerken', [$book->id], ['class'=>'btn btn-primary']) }}
-                                                |
                                                 {!! Form::button('Verwijder',['class'=>'btn btn-danger', 'type'=>'submit']) !!}
                                             {!! Form::close() !!}
                                         </td>
@@ -45,6 +45,7 @@
                                 @endforeach
                             </table>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
