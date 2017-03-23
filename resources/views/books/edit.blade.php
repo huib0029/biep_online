@@ -29,6 +29,11 @@
                             {!! Form::model($book,array('route'=> ['books.update', $book->id], 'method' => 'PUT', 'class' => 'form form-horizontal')) !!}
 
                             <div class="form-group">
+                                {!! Form::label('book_id', 'Vul het book id in') !!}
+                                {!! Form::text('book_id',null, ['class'=>'form-control']) !!}
+                            </div>
+
+                            <div class="form-group">
                                 {!! Form::label('book_isbn', 'Vul het ISBN in') !!}
                                 {!! Form::text('book_isbn',null, ['class'=>'form-control']) !!}
                             </div>
