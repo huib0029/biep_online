@@ -20,6 +20,7 @@
                 <span class="input-group-btn"><button class="btn btn-default" type="button"><i class="fa fa-search"></i></button></span>
             </div>
         </div>
+    </div>
 
                 {{-- Dropdown menu and checkboxes in fitting colours. --}}
                 <div class="dropdown">
@@ -74,7 +75,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+
 
 
 
