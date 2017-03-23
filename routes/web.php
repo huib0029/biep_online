@@ -26,6 +26,13 @@ Route::resource ( 'approvestudents', 'ApprovestudentsController');
 Route::resource ( 'returnbooks', 'ReturnbooksController');
 Route::resource ( 'issuedbooks', 'IssuedbooksController');
 
+Route::resource ( 'books', 'BookController');
+
+
+Route::post('books/create',
+    ['as' => 'books.store', 'uses' => 'BookController@store']);
+
+
 Auth::routes();
 
 Route::group(['middleware' => ['web','auth']], function () {

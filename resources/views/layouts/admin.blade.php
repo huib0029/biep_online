@@ -79,7 +79,7 @@
                     <a href="{{url('home')}}"><i class="fa fa-home fa-fw"></i> Startpagina</a>
                 </li>
                 <li>
-                    <a href="{{ url ('bookadd') }}"><i class="fa fa-book fa-fw"></i> Boeken toevoegen</a>
+                    <a href="{{ url ('books') }}"><i class="fa fa-book fa-fw"></i> Boeken toevoegen</a>
                 </li>
                 <li>
                     <a href="{{ url ('registerbooks') }}"><i class="fa fa-th-list fa-fw"></i> Alle geregistreerde boeken</a>
