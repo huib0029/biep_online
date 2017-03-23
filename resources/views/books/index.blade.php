@@ -21,14 +21,16 @@
 
                         <div class="panel-body">
 
+                            @if (count($books) == 0)
+                                Er zijn op dit moment geen boeken toegevoegd....
+                            @endif
+
                             <table class="table table-condensed table-bordered table-striped table-responsive small">
                                 <tr>
                                     <th>Titel</th>
                                     <th>Actie</th>
                                 </tr>
-                                @if (count($books) == 0)
-                                    Er zijn op dit moment geen boeken toegevoegd....
-                                @endif
+
                                 @foreach($books as $book)
                                     <tr>
                                         <td>{{ link_to_route('books.show', $book->book_title, [$book->id]) }}</td>
