@@ -6,7 +6,7 @@ Schoone gerefactored versie van BIEPonline V1
 
 We werken volgens het Model, View en controller principe, de basis van Laravel.
 
-# Team het zinkende schip:
+# Team BIEPonline 2:
 
 ## *Teun *Bart *Jordy *Jasper *Niels *Mike
 
@@ -25,4 +25,3 @@ We werken volgens het Model, View en controller principe, de basis van Laravel.
 * `php artisan key:generate`
 * `php artisan config:clear`
 * `php artisan serve`
-
