@@ -26,10 +26,10 @@
         <input type="number" class="form-control" data-form-field="book-issue-id" placeholder="Vul hier een boek ID in">
       </div>
     </div>
-    <!-- knop word aangesproken naar de layouts.loader script via id issuebook /!-->
+    <!-- knop word aangesproken naar de layouts.loader script via data-target bookout /!-->
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="button" data-toggle="modal" data-target="#bookOut" class="btn btn-primary btn-lg btn-block" id="issuebook">Geef boek uit <i class="fa fa-book"></i> <i class="fa fa-long-arrow-right"></i></button>
+        <button type="button" data-toggle="modal" data-target="#bookOut" class="btn btn-primary btn-lg btn-block">Geef boek uit <i class="fa fa-book"></i> <i class="fa fa-long-arrow-right"></i></button>
       </div>
     </div>
   </form>
@@ -46,10 +46,10 @@
         <input type="number" class="form-control" data-form-field="book-issue-id" placeholder="Vul hier een boek ID in">
       </div>
     </div>
-    <!-- knop "Neem boek in" word aangesproken naar de layouts.loader script via id issuebook /!-->
+    <!-- knop "Neem boek in" word aangesproken naar de layouts.loader script via datatarget bookin /!-->
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="button" data-toggle="modal" id="returnbook" data-target="#bookIn" class="btn btn-primary btn-lg btn-block">Neem boek in <i class="fa fa-book"></i> <i class="fa fa-long-arrow-left"></i></button>
+        <button type="button" data-toggle="modal" data-target="#bookIn" class="btn btn-primary btn-lg btn-block">Neem boek in <i class="fa fa-book"></i> <i class="fa fa-long-arrow-left"></i></button>
       </div>
     </div>
   </form>
