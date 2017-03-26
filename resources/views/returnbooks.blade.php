@@ -26,6 +26,7 @@
         <input type="number" class="form-control" data-form-field="book-issue-id" placeholder="Vul hier een boek ID in">
       </div>
     </div>
+    <!-- knop word aangesproken naar de layouts.loader script via id issuebook /!-->
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <button type="button" data-toggle="modal" data-target="#bookOut" class="btn btn-primary btn-lg btn-block" id="issuebook">Geef boek uit <i class="fa fa-book"></i> <i class="fa fa-long-arrow-right"></i></button>
@@ -45,6 +46,7 @@
         <input type="number" class="form-control" data-form-field="book-issue-id" placeholder="Vul hier een boek ID in">
       </div>
     </div>
+    <!-- knop "Neem boek in" word aangesproken naar de layouts.loader script via id issuebook /!-->
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <button type="button" data-toggle="modal" id="returnbook" data-target="#bookIn" class="btn btn-primary btn-lg btn-block">Neem boek in <i class="fa fa-book"></i> <i class="fa fa-long-arrow-left"></i></button>
@@ -95,6 +97,8 @@
       <label>Zoek via ISBN nummer:</label><br></br>
       <div class="form-group has-feedback">
         <label for="ISBN" class="col-sm-2 control-label">ISBN</label>
+        <!-- invul form ISBN word aangesproken via de bootstrap validator.js script, daarin zijn de patterns gedefinieerd zoals in de place holder
+        ingesteld staan, het ID ISBN is geplaatst ter ondersteuning van de functie van het help block maar is niet functioneel./!-->
         <div class="col-sm-10">
               <input placeholder="Vul hier een ISBN nummer in" type="number" pattern="\d+" onKeyDown="if(this.value.length==15) this.value = this.value.slice(0, - 1);" data-minlength="7" maxlength="15" class="form-control"></input>
               <div class="help-block with-errors" id="ISBN">* ISBN nummer moet minimaal 7 tekens bevatten en heeft maximaal 15 tekens.</div>
