@@ -16,11 +16,11 @@ We werken volgens het Model, View en controller principe, de basis van Laravel.
 * `cd 'PROJECT_DIRECTORY'`
 * `composer install`
 * `php artisan key:generate`
-* copy .env.example to .env
-* edit .env
-    * set `DB_DATABASE="YOUR DATABASE NAME"`
-    * set `DB_USERNAME="YOUR DATABASE USERNAME"`
-    * set `DB_PASSWORD="YOUR DATABASE PASSWORD"`
+* Kopieer .env.example naar .env (rechtermuisknop, kopieren en plakken of crtl-c crtl-v)
+* Wijzig het .env bestand (in de rootfolder, open met kladblok bijvoorbeeld)
+    * wijzig `DB_DATABASE="JE DATABASE NAAM"`
+    * wijzig `DB_USERNAME="JE DATABASE GEBRUIKERSNAAM"`
+    * wijzig `DB_PASSWORD="JE DATABASE WACHTWOORD"`
 * `php artisan migrate`
 * `php artisan key:generate`
 * `php artisan config:clear`
