@@ -16,17 +16,12 @@
                 <div class="row">
                     <div class="col-md-10 col-md-offset-0">
 
-                        @if(Session::has('message'))
-                            <div class="alert alert-success">{{ Session::get('message') }}</div>
-                        @endif
-
-                        <div class="form-group">
-
-                        </div>
+                        <div class="form-group"></div>
 
                         <div class="panel-body">
 
                             {!! Form::open(array('route'=> ['books.store'] , 'class' => 'form form-horizontal')) !!}
+                            {{--link naar de bookcontroller @store--}}
 
                             <div class="form-group">
                                 {!! Form::label('book_id', 'Vul het book id in') !!}
@@ -78,7 +73,7 @@
                             </div>
 
                             <div class="form-group">
-                                {!! Form::button('Toevoegen',['type'=>'submit','class'=>'btn btn-primary']) !!}
+                                    {!! Form::button('Toevoegen',['type'=>'submit','class'=>'btn btn-primary']) !!}
                             </div>
 
                             {!! Form::close() !!}

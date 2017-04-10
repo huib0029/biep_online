@@ -79,6 +79,7 @@
                             </table>
 
                             {{ link_to_route('books.index', 'Terug', '', ['class'=>'btn btn-primary']) }}
+                            {{--link naar de bookcontroller @index--}}
 
                         </div>
 

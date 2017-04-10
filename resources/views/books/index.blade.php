@@ -18,31 +18,28 @@
                         <div class="form-group">
                             {{ link_to_route('books.create', 'Nieuw Boek Toevoegen', null, ['class'=>'btn btn-primary btn-lg']) }}
                         </div>
-
-                        @if (count($books) == 0)
-                            Er zijn op dit moment geen boeken toegevoegd....
-                        @else
+                        {{--als er geen boeken zijn wordt deze tekst getoond--}}
+                            @if (count($books) == 0)
+                                Er zijn op dit moment geen boeken toegevoegd....
+                            @else
 
                         <div class="panel-body">
-
-
                             <table class="table table-condensed table-bordered table-striped table-responsive">
                                 <tr>
                                     <th>Titel</th>
                                     <th>Actie</th>
                                 </tr>
-
-                                @foreach($books as $book)
-                                    <tr>
-                                        <td>{{ link_to_route('books.show', $book->book_title, [$book->id]) }}</td>
-                                        <td class="col-sm-4">
-                                            {!! Form::open(array('route'=>['books.destroy', $book->id], 'method'=>'DELETE')) !!}
-                                                {{ link_to_route('books.edit', 'Bewerken', [$book->id], ['class'=>'btn btn-primary']) }}
-                                                {!! Form::button('Verwijder',['class'=>'btn btn-danger', 'type'=>'submit']) !!}
-                                            {!! Form::close() !!}
-                                        </td>
-                                    </tr>
-                                @endforeach
+                                    @foreach($books as $book)
+                                        <tr>
+                                            <td>{{ link_to_route('books.show', $book->book_title, [$book->id]) }}</td>
+                                            <td class="col-sm-4">
+                                                {!! Form::open(array('route'=>['books.destroy', $book->id], 'method'=>'DELETE')) !!}
+                                                    {{ link_to_route('books.edit', 'Bewerken', [$book->id], ['class'=>'btn btn-primary']) }}
+                                                    {!! Form::button('Verwijder',['class'=>'btn btn-danger', 'type'=>'submit']) !!}
+                                                {!! Form::close() !!}
+                                            </td>
+                                        </tr>
+                                    @endforeach
                             </table>
                         </div>
                         @endif
