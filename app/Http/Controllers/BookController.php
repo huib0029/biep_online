@@ -40,7 +40,27 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        $book = Books::create($request->all());
+        $this->validate($request,[
+            'book_id' => 'required|max:255',
+            'book_isbn' => 'required|max:255',
+            'book_title' => 'required|max:255',
+            'book_author_id' => 'required|max:255',
+            'book_author_name' => 'required|max:255',
+            'book_colorcat' => 'required|max:255',
+            'book_dis' => 'required|max:255',
+        ]);
+
+        $book = Books::create([
+            'book_id' => $request ['book_id'],
+            'book_isbn' => $request ['book_isbn'],
+            'book_title' => $request ['book_title'],
+            'book_author_id' => $request ['book_author_id'],
+            'book_author_name' => $request ['book_author_name'],
+            'book_colorcat' => $request ['book_colorcat'],
+            'book_dis' => $request ['book_dis'],
+        ]);
+
+        $book->save();
 
         return redirect()->route('books.index')->with('message', 'Het boek is toegevoegd aan de catalogus');
         //het boek wordt toegevoegd in de database

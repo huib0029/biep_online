@@ -17,7 +17,7 @@
                     <div class="col-md-10 col-md-offset-0">
                         <div class="form-group">
 
-                            <table class="table table-condensed table-bordered table-striped table-responsive small">
+                            <table class="table table-condensed table-bordered table-striped table-responsive">
 
                                     <tr>
                                         <th>
@@ -78,7 +78,7 @@
 
                             </table>
 
-                            {{ link_to_route('books.index', 'Terug', ['class'=>'btn btn-primary']) }}
+                            {{ link_to_route('books.index', 'Terug', '', ['class'=>'btn btn-primary']) }}
 
                         </div>
 
